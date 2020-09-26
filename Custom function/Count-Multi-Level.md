@@ -1,3 +1,4 @@
+# Count-Multi-Level
 `Google Spreadsheet`
 `CountM` 's a custom function for Google Spreadsheet. This function 'll count a range with multi column by vertical direction. It check from the right to left and restart from 1 when detect value different from previous row.
 
@@ -23,7 +24,7 @@ function countM(range) {
       if (range[i][last] != range[i-1][last]) {
         result.push(result[i-1]+1);
       } else {result.push(result[i-1])}
-      
+      A
       // check value in the left column
       for (let j=last-1; j>=0;j--) {
         if (range[i][j] != range[i-1][j]) {
@@ -39,3 +40,40 @@ function countM(range) {
 }
 ```
 
+## Example
+
+| A      | B       | C    |
+| Region | Product | Part |
+| -------| --------| -----|
+| N | Car | Light |
+| N | Car | Wheel |
+| N | Car | Wheel |
+| N | Truck | Light |
+| N | Truck | Horn |
+| N | Crane | Horn |
+| N | Crane | Belt |
+| N | Crane | Fuel |
+| S | Crane | Fuel |
+| S | Car | Wheel 
+| S | Truck | Light |
+| S | Crane | Horn |
+| S | Crane | Light |
+| S | Truck | Horn |
+| N | Crane | Horn |
+
+`=countM(A2:C18)` result:
+| Order |
+| ----- |
+| 1 |
+| 2 |
+| 2 |
+| 1 |
+| 2 |
+| 1 |
+| 2 |
+| 3 |
+| 1 |
+| 2 |
+| 3 |
+| 1 |
+| 2 |
