@@ -48,34 +48,20 @@ function countM(range) {
 | Region | Product | Part | Id |
 | -------| --------| ---- | ---|
 | N | Car | Light | `=countM(A2:C18)` |
-| N | Car | Wheel |   |
-| N | Car | Wheel |   |
-| N | Truck | Light |    |
-| N | Truck | Horn |    |
-| N | Crane | Horn |    |
-| N | Crane | Belt |    |
-| N | Crane | Fuel |   |
-| S | Crane | Fuel |   |
-| S | Car | Wheel |    |
-| S | Truck | Light |    |
-| S | Crane | Horn |   |
-| S | Crane | Light |   |
-| S | Truck | Horn |   |
-| N | Crane | Horn |   |
+| N | Car | Wheel | 2  |
+| N | Car | Wheel | 2  |
+| N | Truck | Light | 1   |
+| N | Truck | Horn |  2  |
+| N | Crane | Horn |  1  |
+| N | Crane | Belt |   2 |
+| N | Crane | Fuel | 3  |
+| S | Crane | Fuel |  1 |
+| S | Car | Wheel |  1  |
+| S | Car | Light | 2   |
+| S | Crane | Horn | 1  |
+| S | Crane | Light | 2  |
+| S | Truck | Horn |  1 |
+| N | Crane | Horn |  1 |
 
-`=countM(A2:C18)` result:
-| Order |
-| ----- |
-| 1 |
-| 2 |
-| 2 |
-| 1 |
-| 2 |
-| 1 |
-| 2 |
-| 3 |
-| 1 |
-| 2 |
-| 3 |
-| 1 |
-| 2 |
+## Reference
+* [Custom Functions in Google Sheets](https://developers.google.com/apps-script/guides/sheets/functions)
