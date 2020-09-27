@@ -43,23 +43,25 @@ function countM(range) {
 ## Example
 
 | A      | B       | C    |
-| Region | Product | Part |
 | -------| --------| -----|
-| N | Car | Light |
-| N | Car | Wheel |
-| N | Car | Wheel |
-| N | Truck | Light |
-| N | Truck | Horn |
-| N | Crane | Horn |
-| N | Crane | Belt |
-| N | Crane | Fuel |
-| S | Crane | Fuel |
-| S | Car | Wheel 
-| S | Truck | Light |
-| S | Crane | Horn |
-| S | Crane | Light |
-| S | Truck | Horn |
-| N | Crane | Horn |
+
+| Region | Product | Part | Id |
+| -------| --------| ---- | ---|
+| N | Car | Light | `=countM(A2:C18)` |
+| N | Car | Wheel |   |
+| N | Car | Wheel |   |
+| N | Truck | Light |    |
+| N | Truck | Horn |    |
+| N | Crane | Horn |    |
+| N | Crane | Belt |    |
+| N | Crane | Fuel |   |
+| S | Crane | Fuel |   |
+| S | Car | Wheel |    |
+| S | Truck | Light |    |
+| S | Crane | Horn |   |
+| S | Crane | Light |   |
+| S | Truck | Horn |   |
+| N | Crane | Horn |   |
 
 `=countM(A2:C18)` result:
 | Order |
