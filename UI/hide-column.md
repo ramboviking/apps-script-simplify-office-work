@@ -39,6 +39,38 @@ function hideCol(arrOfLetter) {
 ```
 
 ## Hide columns by range
+Hide columns based on a range in the active sheet. Input column name to a range before selecting function from custom menu.
+
+```javascript
+function hideColByRange() {
+  let ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getActiveSheet();
+  let range = sheet.getActiveRange();
+  let values = range.getValues();
+  var chain = ''; // Combine array of values to a string
+  
+  values.forEach(row => {
+    chain = chain.concat(row,' ');
+  });
+  
+  let columnName =  chain.replace(',', ' ').trim().split(' ');
+  let ui = SpreadsheetApp.getUi();
+  let response = ui.alert('Do you want to hide column: ' + columnName);
+  if (response == ui.Button.OK) {
+      hideCol(columnName);
+  }
+}
+
+function hideCol(arrOfLetter) {
+  let ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getActiveSheet();
+  for (i=0; i<arrOfLetter.length; i++) {
+    if (arrOfLetter[i]) {
+      sheet.hideColumn(sheet.getRange(arrOfLetter[i] + ':' + arrOfLetter[i]))
+    }
+  }
+}
+```
 
 ## Hide coumns by variable
 Input columns name directy in the code. Variable type 's array.
@@ -59,3 +91,6 @@ function hideCol(arrOfLetter) {
   }
 }
 ```
+## Reference
+* [Custom menu in G Suite](https://developers.google.com/apps-script/guides/menus)
+* [Class UI](https://developers.google.com/apps-script/reference/base/ui)
