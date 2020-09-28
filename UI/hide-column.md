@@ -1,7 +1,7 @@
 # Hide-column
-Hide one (or many) column of Google Spreadsheet by apps script. Input parameter by prompt, range or object.
+Hide one (or many) column of Google Spreadsheet by apps script. Input parameter by prompt, range or variable.
 
-Custom-menu.gs
+`Custom-menu.gs`
 ```javascript
 function onOpen(){
   ui = SpreadsheetApp.getUi();
