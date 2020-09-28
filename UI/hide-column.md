@@ -72,7 +72,7 @@ function hideCol(arrOfLetter) {
 }
 ```
 
-## Hide coumns by variable
+## Hide columns by variable
 Input columns name directy in the code. Variable type 's array.
 
 ```javascript
