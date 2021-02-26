@@ -5,14 +5,11 @@ Remove empty colunms - rows after lastColumn() and lastRow() of a sheet by Apps 
 function trimSheet() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName('ResponseSheet');
+  var lastRow = sheet.getLastRow();
+  var lastColumn = sheet.getLastColumn();
 
-  for (i=sheet.getLastColumn()+1; i<=sheet.getMaxColumns(); i++) {
-    sheet.hideColumns(i);
-  };
-
-  for (j=sheet.getLastRow()+1; j<= sheet.getMaxRows(); j++) {
-    sheet.hideRows(j);
-  };
+  sheet.hideRows(lastRow +1, sheet.getMaxRows() - lastRow)
+  sheet.hideColumns(lastColumn + 1, sheet.getMaxColumns() - lastColumn)
 
   return sheet;
 }
