@@ -3,8 +3,6 @@ Navigator custom menu for Google Sheets using Apps Script.
 
 ![](https://images.viblo.asia/b0f269ec-e1fa-4ea3-b6ae-4c263dad31d1.png)
 
-![](https://images.viblo.asia/b329dc5c-3d86-4b62-8a52-4abdbe1094e5.png)
-
 ``` javascript
 var ss = SpreadsheetApp.getActiveSpreadsheet();
 var sheets = ss.getSheets();
