@@ -1,5 +1,7 @@
 Tạo data table web app để hiển thị dữ liệu từ Google Sheets sử dụng Apps Script.
 
+![](https://images.viblo.asia/b9217db1-0838-4670-8ca3-3301c1ceedad.gif)
+
 ## Code Apps Script
 
 ``` javascript
